@@ -24,12 +24,22 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot Starter Dependencies
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// MySQL Connector
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// AWS SDK S3
+	implementation 'software.amazon.awssdk:s3'
+
+	// Testing
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
