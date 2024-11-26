@@ -24,3 +24,4 @@ public class User {
     @Column(nullable = false)
     private String username;
 }
+//private로 이메일 아이디 비밀번호 이름을 등록
