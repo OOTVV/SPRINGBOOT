@@ -29,9 +29,9 @@ public class Post {
 	@Column(nullable = false)
 	private String content;
 
-	private Integer likes = 0;
+	private Integer likes;
 
-	private Integer views = 0;
+	private Integer views;
 
 	@Column(name = "created_at")
 	private LocalDateTime createdAt;

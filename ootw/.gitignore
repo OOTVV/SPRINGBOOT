@@ -42,8 +42,6 @@ out/
 ### VS Code ###
 .vscode/
 
-### resources ###
-src/main/resources/*.yml
 
 ### logs ###
 -logs/
