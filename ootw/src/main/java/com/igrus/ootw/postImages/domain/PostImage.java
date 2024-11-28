@@ -2,10 +2,11 @@ package com.igrus.ootw.postImages.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "post_image")
+@Table(name = "post_images")
 @Getter
 @Setter
 @Builder
@@ -23,8 +24,9 @@ public class PostImage {
 	@Column(nullable = false)
 	private String imageUrl;
 
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
 	private Boolean isMain;
-	@Column(nullable = false)
+
+	@Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private LocalDateTime createdAt;
 }
