@@ -1,8 +1,11 @@
 package com.igrus.ootw.post.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.igrus.ootw.post.domain.Post;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface PostRepository extends JpaRepository<Post,Long> {
+import java.util.Optional;
+
+@Repository
+public interface PostRepository extends JpaRepository<Post, Long> {
 }
