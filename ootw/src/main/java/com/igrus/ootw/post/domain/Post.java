@@ -1,7 +1,5 @@
 package com.igrus.ootw.post.domain;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,6 +11,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -27,13 +28,12 @@ public class Post {
 	private Long id;
 
 	@Column(nullable = false)
-	private String content;
+	private String content;  // 게시물 내용
 
-	private Integer likes;
+	private Integer likes;   // 좋아요 수
+	private Integer views;   // 조회수
 
-	private Integer views;
-
-	@Column(name = "created_at")
-	private LocalDateTime createdAt;
-
+	@CreatedDate
+	@Column(name = "created_at", updatable = false)
+	private LocalDateTime cratedAt;
 }
