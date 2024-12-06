@@ -8,11 +8,11 @@ import java.time.LocalDateTime;
 import com.igrus.ootw.post.domain.Post;
 
 @Entity
-@Table(name = "post_images")
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
+@Table(name = "post_image")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class PostImage {
 
