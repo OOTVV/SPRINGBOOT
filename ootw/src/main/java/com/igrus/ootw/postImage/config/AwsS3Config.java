@@ -1,4 +1,4 @@
-package com.igrus.ootw.postImages.config;
+package com.igrus.ootw.postImage.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
