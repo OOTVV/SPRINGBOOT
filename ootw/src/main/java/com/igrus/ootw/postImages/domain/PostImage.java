@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+import com.igrus.ootw.post.domain.Post;
+
 @Entity
 @Table(name = "post_images")
 @Getter
@@ -19,9 +21,6 @@ public class PostImage {
 	private Long id;
 
 	@Column(nullable = false)
-	private Long postId;
-
-	@Column(nullable = false)
 	private String imageUrl;
 
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
@@ -29,4 +28,10 @@ public class PostImage {
 
 	@Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private LocalDateTime createdAt;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "post_id", nullable = false)
+	private Post post;
+
 }
+
