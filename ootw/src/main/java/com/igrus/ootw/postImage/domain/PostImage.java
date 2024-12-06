@@ -1,4 +1,4 @@
-package com.igrus.ootw.postImages.domain;
+package com.igrus.ootw.postImage.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,13 +20,13 @@ public class PostImage {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false)
+	@Column(name="iamge_url")
 	private String imageUrl;
 
-	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
+	@Column(name="is_main", columnDefinition = "BOOLEAN DEFAULT false")
 	private Boolean isMain;
 
-	@Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	@Column(name="created_at",columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private LocalDateTime createdAt;
 
 	@ManyToOne(fetch = FetchType.LAZY)

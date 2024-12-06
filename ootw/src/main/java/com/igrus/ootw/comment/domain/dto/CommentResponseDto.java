@@ -1,6 +1,6 @@
-package com.igrus.ootw.comment.DTO;
+package com.igrus.ootw.comment.domain.dto;
 
-import com.igrus.ootw.comment.entity.Comment;
+import com.igrus.ootw.comment.domain.Comment;
 import lombok.Getter;
 
 @Getter
@@ -12,14 +12,14 @@ public class CommentResponseDto {
     private long orderNumber;
     private Long postsId;
     //Entity->DTO
-    public CommentResponseDto(Comment comment)
-    {
-        this.commentid=comment.getCommentid();
-        this.comment=comment.getCommentContent();
-        this.postsId=comment.getPost().getId();
-        this.parentIdx=comment.getParentIdx();
-        this.orderNumber=comment.getOrderNumber();
-        //this.userid=comment.getUser().getId();
-
-    }
+    // public CommentResponseDto(Comment comment)
+    // {
+    //     this.commentid=comment.getCommentid();
+    //     this.comment=comment.getCommentContent();
+    //     this.postsId=comment.getPost().getId();
+    //     this.parentIdx=comment.getParentIdx();
+    //     this.orderNumber=comment.getOrderNumber();
+    //     //this.userid=comment.getUser().getId();
+    //
+    // }
 }

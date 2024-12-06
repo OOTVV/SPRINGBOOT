@@ -1,4 +1,4 @@
-package com.igrus.ootw.comment.controller;
+package com.igrus.ootw.comment.ui;
 
 public class CommentController {
 }
