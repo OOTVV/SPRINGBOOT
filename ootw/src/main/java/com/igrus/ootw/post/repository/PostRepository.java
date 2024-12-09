@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
-    // JpaRepository에서 제공하는 기본적인 CRUD 메서드를 사용
 }
+
