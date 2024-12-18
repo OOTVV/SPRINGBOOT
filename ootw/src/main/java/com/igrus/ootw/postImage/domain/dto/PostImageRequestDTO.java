@@ -15,10 +15,10 @@ public class PostImageRequestDTO {
 	@Builder
 	public static class PostImagesCreateRequestDTO {
 
-		@NotNull
+		@NotNull(message = "Image is empty")
 		private List<MultipartFile> multipartFiles;
 
-		@NotNull
+		@NotNull(message = "Post is Emtpy")
 		private Post post;
 	}
 }
