@@ -7,19 +7,19 @@ import lombok.Getter;
 public class CommentResponseDto {
     private long commentid;
     private String comment;
-    private String userid;
+    private Long userid;
     private long parentIdx;
     private long orderNumber;
     private Long postsId;
     //Entity->DTO
-    // public CommentResponseDto(Comment comment)
-    // {
-    //     this.commentid=comment.getCommentid();
-    //     this.comment=comment.getCommentContent();
-    //     this.postsId=comment.getPost().getId();
-    //     this.parentIdx=comment.getParentIdx();
-    //     this.orderNumber=comment.getOrderNumber();
-    //     //this.userid=comment.getUser().getId();
-    //
-    // }
+     public CommentResponseDto(Comment comment)
+     {
+         this.commentid=comment.getId();
+         this.comment=comment.getContent();
+         this.postsId=comment.getPost().getId();
+         this.parentIdx=comment.getParentComment().getId();
+         this.orderNumber=comment.getChildComments().size();
+         this.userid=comment.getUser().getId();
+
+     }
 }

@@ -17,7 +17,6 @@ import com.igrus.ootw.user.domain.User;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Comment {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Primary Key 자동 생성
     private Long id;  // 내 댓글 키
@@ -39,5 +38,4 @@ public class Comment {
 
     @OneToMany(mappedBy = "parentComment", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> childComments = new ArrayList<>();
-
 }
