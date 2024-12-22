@@ -38,4 +38,10 @@ public class Comment {
 
     @OneToMany(mappedBy = "parentComment", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> childComments = new ArrayList<>();
+
+    public void update(String comment) {
+        this.content = comment;
+    }
+
 }
+
