@@ -10,6 +10,7 @@ import java.util.List;
 import com.igrus.ootw.comment.domain.Comment;
 import com.igrus.ootw.post.domain.Post;
 import com.igrus.ootw.user.domain.enums.Gender;
+import org.springframework.data.annotation.CreatedDate;
 
 @Entity
 @Getter
@@ -41,6 +42,5 @@ public class User {
 
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Post> posts = new ArrayList<>();
-
 }
 

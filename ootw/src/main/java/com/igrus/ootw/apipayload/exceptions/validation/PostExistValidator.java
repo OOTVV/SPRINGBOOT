@@ -3,7 +3,7 @@ package com.igrus.ootw.apipayload.exceptions.validation;
 
 import com.igrus.ootw.apipayload.exceptions.validation.PostNotFoundException;
 import com.igrus.ootw.apipayload.exceptions.annotation.ExistPost;
-import com.igrus.ootw.post.repository.PostRepository;
+import com.igrus.ootw.post.epositoryr.PostRepository;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import lombok.RequiredArgsConstructor;
